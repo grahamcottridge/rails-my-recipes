@@ -1,5 +1,8 @@
-<h1 align="center">Listing all recipes</h1>
-<% @recipes.each do |recipe| %>
+<div class="container">
+
+  <%= render 'shared/pagetitle', title: "Showing all recipes" %>
+
+  <% @recipes.each do |recipe| %>
   <div class="row">
     <div class="col-md-2">
       <section class="center">
@@ -12,8 +15,9 @@
       <p>
         <span class="quiet"><small>Created
 
-        <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
-      </p>
+          <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
+        </p>
+      </div>
     </div>
+    <% end %>
   </div>
-<% end %>
