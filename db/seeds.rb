@@ -10,8 +10,10 @@ puts "5 chefs created"
 5.times do |recipe|
   Recipe.create!(
     name: "Recipe #{recipe}",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    chef_id: 1
     )
+
 end
 
 puts "5 recipes created"
