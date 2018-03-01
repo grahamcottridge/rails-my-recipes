@@ -4,10 +4,11 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">About</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Recipes</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Blog</a>
-
+    <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Recipes", recipes_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Create Recipe", new_recipe_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- <a href="" class="navbar-wagon-item navbar-wagon-link">About</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Blog</a> -->
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
