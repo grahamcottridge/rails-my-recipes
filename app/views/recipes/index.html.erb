@@ -1,13 +1,17 @@
 <div class="container">
 
   <%= render 'shared/pagetitle', title: "Recipes" %>
-
+  <div class="center">
+    <%= will_paginate %>
+  </div>
   <div class="container">
     <div class="row">
       <%= render 'recipe', obj: @recipes %>
     </div>
   </div>
-
+  <div class="center">
+    <%= will_paginate %>
+  </div>
 <!--
   <% @recipes.each do |recipe| %>
   <div class="row">
