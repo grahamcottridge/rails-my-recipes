@@ -1,5 +1,5 @@
 <div class="container">
-  <%= render 'shared/pagetitle', title: "Chef #{@chef.name}'s profile" %>
+  <%= render 'shared/pagetitle', title: "#{@chef.name.capitalize}'s profile" %>
 
   <div class="row">
     <div class="col-md-4 col-md-offset-4 center">
@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <h4 align="center"><%= @chef.name %>'s recipes</h4>
+  <h4 align="center"><%= @chef.name.capitalize %>'s recipes</h4>
 
   <%= render 'recipes/recipe', obj: @chef_recipes %>
 

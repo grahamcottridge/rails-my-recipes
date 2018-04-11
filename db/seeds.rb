@@ -3,6 +3,8 @@
     name: "Chef #{chef}",
     email: Faker::Internet.email
     )
+    password_digest: "123456"
+    )
 end
 
 puts "5 chefs created"

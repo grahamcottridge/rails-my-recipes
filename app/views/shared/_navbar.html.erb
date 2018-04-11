@@ -8,6 +8,7 @@
     <%= link_to "Recipes", recipes_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Chefs", chefs_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Create Recipe", new_recipe_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Log in", login_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <!-- <a href="" class="navbar-wagon-item navbar-wagon-link">About</a>
     <a href="" class="navbar-wagon-item navbar-wagon-link">Blog</a> -->
 
@@ -18,7 +19,7 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
         </ul>
       </div>
     </div>
