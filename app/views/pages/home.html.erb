@@ -1,13 +1,13 @@
 <div class="container">
   <div class="jumbotron center">
-    <h1>Welcome to My Recipes</h1>
-    <h2>The best recipe sharing app!</h2>
-    <p><%= link_to "Sign up", signup_path, class: "btn btn-success btn-lg" %>
-      <%= link_to "Log in", "#", class: "btn btn-success btn-lg" %></p>
+    <h1>Welcome to <br> My Recipes</h1>
+    <h2>The place to share your recipes</h2>
+    <p><%= link_to "Sign up", signup_path, class: "btn btn-success" %>
+      <%= link_to "Log in", "#", class: "btn btn-success" %></p>
     </div>
-  </div>
 
-  <div class="container">
+    <h3>Popular Recipes</h3>
+
     <div class="row">
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(/assets/burger.jpg);">
@@ -40,4 +40,40 @@
         </div>
       </div>
     </div>
+
+    <h3>Popular Chefs</h3>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(/assets/burger.jpg);">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2>Tasty Burger</h2>
+            <p>mmmm...delicious</p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(/assets/burger.jpg);">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2>Tasty Burger</h2>
+            <p>mmmm...delicious</p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(/assets/burger.jpg);">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2>Tasty Burger</h2>
+            <p>mmmm...delicious</p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+    </div>
+
   </div>
