@@ -2,7 +2,7 @@
 
   <%= render 'shared/pagetitle', title: "Recipes" %>
   <div class="center">
-    <%= will_paginate %>
+    <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination pagination-lg') %>
   </div>
   <div class="container">
     <div class="row">
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="center">
-    <%= will_paginate %>
+    <%= will_paginate(@things, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer, class: 'pagination pagination-md') %>
   </div>
 <!--
   <% @recipes.each do |recipe| %>
