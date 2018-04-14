@@ -13,8 +13,7 @@
         <div class="dropdown">
           <img src="assets/graham.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li></li>
-            <li><%= link_to "Profile", chef_path(current_chef) %></li>
+            <li><%= link_to "#{current_chef.name.capitalize}'s Profile", chef_path(current_chef) %><%= "Admin" if current_chef.admin? %> </li>
             <li><%= link_to "Edit Profile", edit_chef_path(current_chef) %></li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           </ul>
