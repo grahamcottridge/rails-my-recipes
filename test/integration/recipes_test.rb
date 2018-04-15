@@ -11,11 +11,13 @@ class RecipesTest < ActionDispatch::IntegrationTest
   end
 
   test "should get recipes index" do
+    sign_in_as(@chef, "password")
     get recipes_url
     assert_response :success
   end
 
   test "should get recipes listing" do
+    sign_in_as(@chef, "password")
     get recipes_path
     assert_template 'recipes/index'
     assert_select "a[href=?]", recipe_path(@recipe), text: @recipe.name
