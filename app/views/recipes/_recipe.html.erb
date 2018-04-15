@@ -4,6 +4,10 @@
     <div class="card-category"></div>
     <div class="card-description">
       <h2><%= recipe.name %></h2>
+      <% if recipe.ingredients.any? %>
+      <p>Ingredients <%= render recipe.ingredients %> ago</p>
+      <% end %>
+
       <p>Created <%= time_ago_in_words(recipe.created_at) %> ago</p>
         <% if (current_chef == recipe.chef || current_chef.admin?) %>
         <%= link_to "Edit recipe", edit_recipe_path(recipe), class: "btn btn-sm btn-primary btn-xs" %>
