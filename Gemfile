@@ -20,6 +20,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0'
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
