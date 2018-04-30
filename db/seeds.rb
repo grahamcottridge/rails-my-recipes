@@ -2,7 +2,8 @@ Chef.create!(
   name: "Graham",
   email: "graham@example.com",
   password_digest: BCrypt::Password.create('123456'),
-  admin: true
+  admin: true,
+  photo: Faker::Avatar.image
   )
 
 puts "1 admin user created"
@@ -11,17 +12,19 @@ Chef.create!(
   name: "Bob",
   email: "bob@example.com",
   password_digest: BCrypt::Password.create('123456'),
-  admin: false
+  admin: false,
+  photo: Faker::Avatar.image
   )
 
-puts "1 admin user created"
+puts "1 user created"
 
 8.times do |chef|
   Chef.create!(
     name: Faker::LordOfTheRings.character,
     email: Faker::Internet.email,
     password_digest: BCrypt::Password.create('123456'),
-    admin: false
+    admin: false,
+    photo: Faker::Avatar.image
     )
 end
 

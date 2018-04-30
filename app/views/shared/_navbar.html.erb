@@ -31,6 +31,7 @@
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <img src="assets/graham.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <% if current_chef.admin? %>
           <li><%= link_to "#{current_chef.name.capitalize}'s Profile Admin", chef_path(current_chef) %></li>
