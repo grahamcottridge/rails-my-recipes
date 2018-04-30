@@ -8,7 +8,8 @@
       <p>Ingredients <%= render recipe.ingredients %></p>
       <% end %>
 
-      <p>Created <%= time_ago_in_words(recipe.created_at) %> ago</p>
+      <p>Created <%= time_ago_in_words(recipe.created_at) %> ago |
+              <%= pluralize(recipe.comments.count, 'Comment') %></p>
         <% if (current_chef == recipe.chef || current_chef.admin?) %>
         <%= link_to "Edit recipe", edit_recipe_path(recipe), class: "btn btn-sm btn-primary btn-xs" %>
         <%= link_to "Delete recipe", recipe_path(recipe), method: :delete,
