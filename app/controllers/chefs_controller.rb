@@ -53,7 +53,7 @@ class ChefsController < ApplicationController
   end
 
   def chef_params
-    params.require(:chef).permit(:name, :email, :password, :password_confirmation)
+    params.require(:chef).permit(:name, :email, :password, :password_confirmation, :photo)
   end
 
   def require_same_user

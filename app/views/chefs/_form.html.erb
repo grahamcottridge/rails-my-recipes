@@ -1,5 +1,7 @@
 <%= render 'shared/errors', obj: @chef %>
 
+
+
 <div class="row">
   <div class="col-md-12">
     <%= form_for(@chef, :html => {class: "form-horizontal", role: "form"}) do |f| %>
@@ -41,11 +43,17 @@
       </div>
     </div>
 
-<%= simple_form_for(@chef) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <!-- [...] -->
+<%= form_for(@chef, :html => {class: "form-horizontal", multipart: true, role: "form"}) do |f| %>
+
+<div class="form-group">
+  <div class="control-label col-md-2">
+    <%= f.label :photo, "Add Image" %>
+  </div>
+  <div class="col-md-8">
+    <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+  </div>
+</div>
+
 <% end %>
 
     <div class="form-group">
